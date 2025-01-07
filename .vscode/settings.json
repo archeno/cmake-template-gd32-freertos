@@ -1,0 +1,8 @@
+{
+    "iis.configDir": "",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "files.associations": {
+        "gd32f4xx_adc.h": "c",
+        "freertos.h": "c"
+    },
+}
