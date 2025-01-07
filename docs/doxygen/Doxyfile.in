@@ -1,0 +1,9 @@
+# Doxyfile.in
+# Doxygen configuration template
+
+PROJECT_NAME           = @PROJECT_NAME@
+OUTPUT_DIRECTORY       = @DOXYGEN_OUTPUT_DIR@
+INPUT                  = @DOXYGEN_INPUT_DIR@
+FILE_PATTERNS          = *.c *.h
+RECURSIVE              = YES
+EXCLUDE                = @EXCLUDE_DIRS@
