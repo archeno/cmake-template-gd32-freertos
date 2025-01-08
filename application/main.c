@@ -45,6 +45,53 @@ void UART3_init(void)
 }
 
 /**
+ * @brief Function control flow.
+ * @dot
+ * digraph ControlFlow {
+ *   Start -> Decision [label="Check condition"];
+ *   Decision -> TruePath [label="Yes"];
+ *   Decision -> FalsePath [label="No"];
+ *   TruePath -> End;
+ *   FalsePath -> End;
+ * }
+ * @enddot
+ */
+
+/**
+ * @brief Task communication diagram.
+ * @dot
+ * digraph Tasks {
+ *   Task1 -> Task2 [label="Data"];
+ *   Task2 -> Task3 [label="Signal"];
+ * }
+ * @enddot
+ */
+
+/**
+ * @dot
+ * digraph StyledGraph {
+ *   node [shape=circle, style=filled, color=lightblue];
+ *   A -> B [color=red, label="error"];
+ *   B -> C [color=green, label="success"];
+ * }
+ * @enddot
+ */
+
+/**
+ * @brief State machine for a traffic light system.
+ * @dot
+ * digraph TrafficLight {
+ *   node [shape=circle, style=filled, color=lightblue];
+ *   Red -> Green [label="Timer expired"];
+ *   Green -> Yellow [label="Timer expired"];
+ *   Yellow -> Red [label="Timer expired"];
+ * }
+ * @enddot
+ */
+
+
+
+/**
  * @brief 串口打印函数
  *
  * @param str 待发送的字符串

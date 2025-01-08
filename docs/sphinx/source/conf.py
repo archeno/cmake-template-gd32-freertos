@@ -19,6 +19,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.todo',
+    'sphinx.ext.graphviz',
     'sphinx.ext.githubpages',
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.autodoc.typehints',
@@ -28,7 +29,7 @@ extensions = [
 
 templates_path = ['_templates']
 exclude_patterns = []
-
+graphviz_output_format = 'svg'  # 设置输出格式（png，svg 等）
 
 
 # -- Options for HTML output -------------------------------------------------

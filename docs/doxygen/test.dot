@@ -1,0 +1,54 @@
+# state machene digraph 
+// digraph G {
+//      node [shape=circle, style=filled fillcolor=lightblue, color=aqua]
+//     {rank=same; a, b}
+   
+//     a->b [label="hehehheh "];
+//     b->c [label=hhhhh];
+//     c -> a [label="fefe", style=dashed, color=red];
+// }
+// digraph G {
+//     // {rank=same; A; B;}      // A 和 B 在同一层
+//     A -> C;
+//     B -> C;
+//     d -> C;
+// }
+
+// graph MyGraph {          // 或 graph MyGraph
+//     a -- B;                // 有向图 (digraph)，A 指向 B
+//     B -- C;                // 无向图 (graph)，B 与 C 相连
+// }
+
+// digraph G {
+//     subgraph cluster_0 {    // cluster_ 开头表示子图，渲染时有边框
+//         label="Group 1";
+//         node [shape=rectangle]
+//         A[label="fdf"]; B[label="fefe"];
+//     }
+
+//     subgraph cluster_1 {
+//         label="Group 2";
+//         C; D;
+//     }
+//     B -> D;
+//     A -> C [arrowtail=tee];                 // 子图之间的连线
+// }
+
+
+digraph process {
+    node [style= "rounded,filled" , color="#b80808"]
+    start [label="Start",fillcolor=lightgray];
+    con1 [shape=diamond, label="Condition 1?",fillcolor=lightyellow];
+    process1 [shape=rectangle,  label="process1"];
+    process2 [shape=rectangle, label="process2"];
+    end [label="End",fillcolor=lightgray];
+    start -> con1 [label="Start"];
+ 
+    con1 -> process1 [label="YES"];
+
+// 确保 Start 和 End 在同一水平方向
+    con1 -> process2 [label="NO", constraint=false];
+    process1 ->end ;
+    process2 ->end;  
+}
+
